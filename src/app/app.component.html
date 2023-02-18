@@ -1,0 +1,31 @@
+  <mat-toolbar color="primary" style="text-align: center;">
+    <h1>.. Generador de Multiplos 3, 5 y 7 ..<span>&nbsp;</span></h1>
+  </mat-toolbar>
+  <div class="container">
+    <mat-card class="body1">
+      <mat-card-content>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Coloca un número</mat-label>
+          <input  matInput [(ngModel)]="numero" type="number">
+        </mat-form-field>
+        <br>
+        <br>
+        <button mat-raised-button color="primary"   (click)="buscarnumero()">Consultar</button>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="body1">
+      <mat-card-content>
+        <h2>
+          Resultado:
+        </h2>
+        <h2 [ngStyle]="{ 'color': color1 }">
+          {{ respuesta }}
+        </h2>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  
